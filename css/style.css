@@ -1,141 +1,218 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    overflow-x: hidden;
-    flex-direction: column;
-    align-items: center;
-    background: #ffffff;
-}
-
-header img {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    max-width: 100%;
-    height: auto; 
-    display: block;
-}
-
-main {
-    background-color: #f3f3f0;
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-}
-
-h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    color: #4169E1;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.photo_profile {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 40px;
-}
-
-.photo_profile img {
-    border: 0;
-    border-radius: 100%;
-    height: 100px;
-    width: 130px;
-}
-
-.destaque {
-    font-size: 1.2rem;
-    color: #947f7d;
-    text-align: center;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1.5em;
-    letter-spacing: -.03px;
-    line-height: 1.50;
-}
-
-.botoes {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.botao {
-    background: #4169E1;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: transform 0.3s ease;
-    transition: .5s
-}
-
-.botao:hover {
-    cursor: pointer;
-    transform: translateY(-3px);
-    background-color: #f4d364;
-}
-
-.icon {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-}
-
-.icon img {
-    padding-right: 10px;
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-1308 {
+        padding: var(--sectionPadding);
+        overflow: hidden;
     }
-    
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    main {
+    #sbs-1308 .cs-container {
         width: 100%;
+        /* changes to 1280px at desktop */
+        max-width: 36.5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(3rem, 4vw, 4rem);
     }
-    
-    .destaque {
+    #sbs-1308 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        max-width: 33.875rem;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+        position: relative;
+        z-index: 10;
+    }
+
+    #sbs-1308 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #sbs-1308 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #sbs-1308 .buttons {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.8rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #sbs-1308 .button {
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        background-color: var(--primary);
+        color: #ffff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        border-radius: 5px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease;
+        transition: .5s;
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
         font-size: 1rem;
     }
-    
-    .botao {
-        padding: 0.8rem 1.5rem;
+    #sbs-1308 .button:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+        background-color: #f4d364;
+    }
+    #sbs-1308 .cs-ul {
+        width: 100%;
+        padding: 0;
+        /* 32px - 48px */
+        margin: clamp(2rem, 5vw, 3rem) 0 0 0;
+        /* 32px - 48px */
+        padding: clamp(2rem, 5vw, 3rem) 0 0 0;
+        border-top: 1px solid #e8e8e8;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 0.75rem;
+    }
+    #sbs-1308 .cs-item {
+        list-style: none;
+        width: 32%;
+        /* making flex so we can align a heading with 1 line to the bottom */
+        display: flex;
+        flex-direction: column;
+        align-self: stretch;
+        align-content: space-between;
+    }
+    #sbs-1308 .cs-number {
+        font-size: 1.5625rem;
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: left;
+        color: var(--primary);
+        display: block;
+        margin: 0 0 0.5rem 0;
+    }
+    #sbs-1308 .cs-h3 {
+        font-size: 1rem;
+        line-height: 1.5em;
+        font-weight: 400;
+        text-align: left;
+        /* auto margin top will push text to bottom if there's only one line */
+        margin: 0;
+        color: var(--bodyTextColor);
+    }
+    #sbs-1308 .cs-image-group {
+        width: 100%;
+        max-width: 41.875rem;
+        height: 100vw;
+        max-height: 39.375rem;
+        position: relative;
+        display: block;
+        z-index: 1;
+    }
+    #sbs-1308 .cs-picture {
+        /* big background image */
+        width: 93%;
+        height: 93%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+    #sbs-1308 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border: 0;
+        border-radius: 10%;
+        object-fit: cover;
+    }
+    #sbs-1308 .cs-box {
+        text-align: left;
+        width: 70%;
+        max-width: 19rem;
+        /* 20px - 40px */
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+        /* prevents padding and border from affecting height and width */
+        box-sizing: border-box;
+        background-color: #1a1a1a;
+        display: inline-flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    #sbs-1308 .cs-desc {
+        /* 16px - 31px */
+        font-size: clamp(1rem, 2.5vw, 1.9375rem);
+        line-height: 1.2em;
+        font-weight: 700;
+        text-align: inherit;
+        width: 100%;
+        color: var(--bodyTextColorWhite);
+        position: relative;
+        z-index: 10;
+    }
+    #sbs-1308 .cs-graphic {
+        width: 150%;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    #sbs-1308 .icon {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+    #sbs-1308 .icon a img {
+        padding-right: 15px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    body {
-    font-size: 18px; 
-    padding: 20px; 
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-1308 .cs-container {
+        max-width: 80rem;
+        /* set to horizontal arrangement */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
     }
-
-    img {
-    max-width: 80%; 
-    margin: 0 auto; 
+    #sbs-1308 .cs-content {
+        width: 48%;
+        padding: 3rem 0;
+        align-self: center;
+        /* prevents flexbox from squishing it */
+        flex: none;
     }
-
-    header, main {
-    padding: 15px;
+    #sbs-1308 .cs-image-group {
+        width: 55%;
+        max-width: 41.875rem;
+        min-height: 41.875rem;
+        max-height: 100%;
+        height: auto;
+        margin: 0;
+    }
+    #sbs-1308 .cs-picture {
+        width: 100%;
+        height: 65%;
+    }
+    #sbs-1308 .cs-box {
+        bottom: 0rem;
+    }
+    #sbs-1308 .cs-graphic {
+        max-width: 44.6875rem;
+        left: auto;
+        right: 8.125rem;
+        transform: translateY(-50%);
     }
 }
